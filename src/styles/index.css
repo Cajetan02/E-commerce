@@ -1,0 +1,141 @@
+/* ===== CSS VARIABLES ===== */
+:root {
+  --cream: #f5f0e8;
+  --ivory: #faf7f2;
+  --charcoal: #1a1814;
+  --warm-gray: #6b6560;
+  --gold: #c8a96e;
+  --gold-light: #e8d5a8;
+  --rust: #b5542a;
+  --border: #e2dbd0;
+  --shadow: 0 4px 32px rgba(26, 24, 20, 0.08);
+  --shadow-hover: 0 12px 48px rgba(26, 24, 20, 0.16);
+  --radius: 2px;
+  --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ===== RESET & BASE ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--ivory);
+  color: var(--charcoal);
+  overflow-x: hidden;
+}
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+}
+section {
+  padding: 6rem 2rem;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== SHARED SECTION STYLES ===== */
+.section-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-header .tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.section-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  color: var(--charcoal);
+}
+.section-header p {
+  margin-top: 0.8rem;
+  color: var(--warm-gray);
+  font-size: 0.95rem;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  display: inline-block;
+  padding: 0.85rem 2.2rem;
+  background: var(--charcoal);
+  color: var(--ivory);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: var(--radius);
+  transition: background var(--transition), transform var(--transition),
+    box-shadow var(--transition);
+}
+.btn-primary:hover {
+  background: var(--gold);
+  color: var(--charcoal);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+.btn-outline {
+  display: inline-block;
+  padding: 0.85rem 2.2rem;
+  border: 1px solid var(--charcoal);
+  color: var(--charcoal);
+  font-size: 0.78rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-radius: var(--radius);
+  transition: all var(--transition);
+  margin-left: 1rem;
+}
+.btn-outline:hover {
+  background: var(--charcoal);
+  color: var(--ivory);
+}

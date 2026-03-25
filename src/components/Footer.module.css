@@ -1,0 +1,88 @@
+.footer {
+  background: var(--charcoal);
+  color: rgba(250, 247, 242, 0.7);
+  padding: 4rem 2rem 2rem;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(250, 247, 242, 0.1);
+}
+
+.brand .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.12em;
+  color: var(--ivory);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 1rem;
+}
+.brand .logo span {
+  color: var(--gold);
+}
+.brand p {
+  font-size: 0.85rem;
+  line-height: 1.8;
+  max-width: 280px;
+}
+
+.col h4 {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.col ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.col ul a {
+  font-size: 0.85rem;
+  color: rgba(250, 247, 242, 0.6);
+  transition: color var(--transition);
+}
+.col ul a:hover {
+  color: var(--gold);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.copy {
+  font-size: 0.78rem;
+  color: rgba(250, 247, 242, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .top {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
